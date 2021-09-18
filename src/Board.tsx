@@ -1,9 +1,10 @@
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {View, Text, Dimensions, StyleSheet} from 'react-native';
 import Background from './Background';
 import {Chess} from 'chess.js';
 import Piece from './Piece';
 import {SIZE} from './Notation';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const {width} = Dimensions.get('window');
 
@@ -39,9 +40,20 @@ const Board = () => {
     [chess, state.player],
   );
 
+  if (chess.in_checkmate()) {
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Text style={{fontSize: 30, color: 'white'}}>{`${
+          state.player === 'b' ? 'White Wins!' : 'Black Wins!'
+        }`}</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <Background />
+
       {state.board.map((row, i) =>
         row.map((square, j) => {
           if (square === null) {

@@ -73,6 +73,7 @@ const Piece = ({id, position, chess, onTurn, enabled}: PieceProps) => {
     onActive: ({translationX, translationY}) => {
       translateX.value = translationX + offsetX.value;
       translateY.value = translationY + offsetY.value;
+      // setCheckMove('e2');
     },
     onEnd: () => {
       const from = toPosition({x: offsetX.value, y: offsetY.value});
