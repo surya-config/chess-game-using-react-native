@@ -1,0 +1,51 @@
+{
+  "name": "chess_game_mobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "chess.js": "^0.12.0",
+    "react": "17.0.2",
+    "react-native": "0.65.1",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "^2.2.2",
+    "react-native-redash": "^16.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^27.0.1",
+    "@types/react": "^17.0.21",
+    "@types/react-native": "^0.65.0",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "react-native-codegen": "^0.0.7",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.4.3"
+  },
+  "resolutions": {
+    "@babel/core": "7.12.10"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@?react-navigation)"
+    ],
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ]
+  },
+  "peerDependencies": {
+    "@babel/preset-env": "^7.1.6"
+  }
+}
