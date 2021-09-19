@@ -1,4 +1,4 @@
-# chess-game-using-react-native
+# Chess Game
 
 You can get the apk from this directory : android\app\build\outputs\apk\release
 
